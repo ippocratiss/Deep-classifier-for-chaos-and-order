@@ -32,10 +32,6 @@ def Standard_map(K, n_points = n_points, x0 = np.pi, y0 = 0.1, plot = False, nor
         y[n] = y[n] + err2
     data_x = x
     data_y = y
-        #data_x.append(x[n])
-        #data_y.append(y[n])
-        #data_x = np.array(data_x)
-        #data_y = np.array(data_y)
     if norm == True: # normalise x,y between [0,1]
         final_data = np.array([ data_x/max(np.abs(data_x)), data_y/max(np.abs(data_y)) ])
     if norm ==False:
@@ -66,10 +62,6 @@ def deVog_map(c, n_points = n_points, noise = 0, x0 = 0.01, y0 = 0, plot = False
         y[n] = y[n] + err2
     data_x = x
     data_y = y
-        #data_x.append(x[n])
-        #data_y.append(y[n])
-        #data_x = np.array(data_x)
-        #data_y = np.array(data_y)
     final_data = np.array([ data_x/(ε+max(np.abs(data_x))), data_y/(ε+max(np.abs(data_y))) ])
     if norm == True:
         final_data = np.array([ data_x/(ε+max(np.abs(data_x))), data_y/(ε+max(np.abs(data_y))) ])
